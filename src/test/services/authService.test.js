@@ -4,6 +4,7 @@ import AuthService from '../../services/authService';
 const authService = new AuthService();
 
 describe('Testando a authService.cadastrarUsuario', () => {
+  // Teste de caixa branca - acesso ao código
   it('O usuario deve poassuir um nome, email e senha', async () => {
     // Padrão triple A (Arrange, Act, Assert)
     // arrange
