@@ -45,7 +45,7 @@ describe('Testando a rota login (POST)', () => {
       .expect('"Usuario ou senha invalido."');
   });
 
-  test(' O login deve validar se está sendo retornado um accessToken', async () => {
+  test('O login deve validar se está sendo retornado um accessToken', async () => {
     const mock = { email: 'raphael@teste.com.br', senha: '123456' };
 
     const response = await request(server)
