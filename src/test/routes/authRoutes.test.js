@@ -13,6 +13,7 @@ afterEach(() => {
 });
 
 describe('Testando a rota login (POST)', () => {
+  // Teste de caixa presta
   test('O login deve possuir um email e senha para se autenticar', async () => {
     const loginMock = { email: 'jeff@teste.com.br' };
 
