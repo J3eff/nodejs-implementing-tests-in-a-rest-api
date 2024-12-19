@@ -32,7 +32,7 @@ describe('Testando a authService.cadastrarUsuario', () => {
     await Usuario.excluir(resultado.content.id);
   });
 
-  it.skip('Não pode ser cadastrado um usuário com e-mail duplicado', async () => {
+  it('Não pode ser cadastrado um usuário com e-mail duplicado', async () => {
     const usuarioMock = {
       nome: 'Raphael',
       email: 'teste@gmail.com',
