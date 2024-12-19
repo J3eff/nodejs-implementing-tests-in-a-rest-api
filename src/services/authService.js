@@ -44,9 +44,7 @@ class AuthService {
       if (!data.senha) throw new Error('A senha do usuario é obrigatório.');
 
       data.senha = await bcryptjs.hash(data.senha, 8);
-
       const usuario = new Usuario(data);
-
       const resposta = await usuario.salvar(usuario);
       return { message: 'usuario criado', content: resposta };
     } catch (err) {
