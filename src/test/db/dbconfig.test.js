@@ -16,6 +16,7 @@ describe('Testando configDB', () => {
       .then((autorSelecionados) => autorSelecionados[0]);
 
     expect(autorSalvo.nome).toBe(autorMock.nome);
-    await db('autores').delete('id', autorSalvo.id);
+
+    await db('autores').where({ id: autorSalvo.id }).del();
   });
 });
