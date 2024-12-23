@@ -28,4 +28,16 @@ describe('Testando disparo de email', () => {
     const validarConexao = await verifyConection();
     expect(validarConexao).toStrictEqual(estaConectado);
   });
+
+  it('O sistema deve enviar um email', async () => {
+    const dadosEmailMock = {
+      from: 'Fred Foo <foo@example.com>',
+      to: 'teste@teste.com',
+      subject: 'Teste de envio de email',
+      text: 'Testando o envio de email',
+    };
+
+    const info = await transporter.sendMail(dadosEmailMock);
+    expect(info.accepted[0]).toBe(dadosEmailMock.to);
+  });
 });
