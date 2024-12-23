@@ -90,6 +90,12 @@ class AluguelLivroService {
       throw new Error(err.message);
     }
   }
+
+  async calcularDataDevolucao(dataAlugada, numeroDiasAlugados) {
+    const dataDevolucao = new Date(dataAlugada);
+    dataDevolucao.setDate(dataDevolucao.getDate() + numeroDiasAlugados);
+    return dataDevolucao;
+  }
 }
 
 export default AluguelLivroService;
