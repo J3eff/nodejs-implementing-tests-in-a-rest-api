@@ -11,6 +11,6 @@ describe('Testando AluguelLivroService', () => {
 
     const dataDevolucao = await aluguelLivroService.calcularDataDevolucao(dataAlugado, numeroDiasAlugados);
 
-    expect(dataDevolucao).toEqual(dataDevolucaoMock);
+    expect(dataDevolucao).toStrictEqual(dataDevolucaoMock);
   });
 });
